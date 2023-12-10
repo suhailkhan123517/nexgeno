@@ -24,7 +24,7 @@ const DashboardPage: React.FC<DashboardPageProps> = ({
       <div className="mt-5">
         <div className="flex flex-col gap-5">
           <div className="flex gap-5 justify-between">
-            <div className="bg-white p-5 rounded-lg flex justify-between items-center gap-5 cursor-pointer shadow-lg w-full">
+            <div className="border-[1px] p-5 rounded-lg flex justify-between items-center gap-5 cursor-pointer shadow-lg w-full">
               <div className="flex flex-col gap-2">
                 <span className="">My Post</span>
                 <span className="text-2xl font-medium">{myPost.length}</span>
@@ -33,7 +33,7 @@ const DashboardPage: React.FC<DashboardPageProps> = ({
                 <MdSupervisedUserCircle size={30} className="text-white" />
               </div>
             </div>
-            <div className="bg-white p-5 rounded-lg flex justify-between items-center gap-5 cursor-pointer shadow-lg w-full">
+            <div className="border-[1px] p-5 rounded-lg flex justify-between items-center gap-5 cursor-pointer shadow-lg w-full">
               <div className="flex flex-col gap-2">
                 <span className="">Total Post</span>
                 <span className="text-2xl font-medium">{data.length}</span>
@@ -42,7 +42,7 @@ const DashboardPage: React.FC<DashboardPageProps> = ({
                 <MdSupervisedUserCircle size={30} className="text-white" />
               </div>
             </div>
-            <div className="bg-white p-5 rounded-lg flex justify-between items-center gap-5 cursor-pointer shadow-lg w-full">
+            <div className="border-[1px] p-5 rounded-lg flex justify-between items-center gap-5 cursor-pointer shadow-lg w-full">
               <div className="flex flex-col gap-2">
                 <span className="">Total Category</span>
                 <span className="text-2xl font-medium">{category.length}</span>
@@ -51,7 +51,7 @@ const DashboardPage: React.FC<DashboardPageProps> = ({
                 <MdSupervisedUserCircle size={30} className="text-white" />
               </div>
             </div>
-            <div className="bg-white p-5 rounded-lg flex justify-between items-center gap-5 cursor-pointer shadow-lg w-full">
+            <div className="border-[1px] p-5 rounded-lg flex justify-between items-center gap-5 cursor-pointer shadow-lg w-full">
               <div className="flex flex-col gap-2">
                 <span className="">Total User</span>
                 <span className="text-2xl font-medium">{users.length}</span>

@@ -6,8 +6,6 @@ import { BsFillPostcardFill } from "react-icons/bs";
 import Link from "next/link";
 import { FaUser } from "react-icons/fa";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
-import getCurrentUser from "@/actions/getCurrentUser";
 import { User } from "@prisma/client";
 
 interface SidebarProps {
@@ -78,9 +76,9 @@ const Sidebar: React.FC<SidebarProps> = ({ user }) => {
                   <Link
                     href={item.path}
                     key={item.id}
-                    className={`p-5 flex items-center gap-5 my-1 rounded-lg hover:bg-white  ${
+                    className={`p-5 flex items-center gap-5 my-1 rounded-lg border-[1px]   ${
                       pathname === item.path &&
-                      "bg-white text-[#17c1e8] font-semibold shadow-lg"
+                      " text-[#17c1e8] font-semibold shadow-lg"
                     } `}
                   >
                     {item.icon}
@@ -96,9 +94,9 @@ const Sidebar: React.FC<SidebarProps> = ({ user }) => {
               <span className="font-bold text-xs my-2">Admin</span>
               <Link
                 href="/dashboard/admin"
-                className={`p-5 flex items-center gap-5 my-1 rounded-lg hover:bg-white  ${
+                className={`p-5 flex items-center gap-5 my-1 rounded-lg border-[1px]   ${
                   pathname === "/dashboard/admin" &&
-                  "bg-white text-[#17c1e8] font-semibold shadow-lg"
+                  " text-[#17c1e8] font-semibold shadow-lg"
                 } `}
               >
                 <FaUser />
@@ -106,9 +104,9 @@ const Sidebar: React.FC<SidebarProps> = ({ user }) => {
               </Link>
               <Link
                 href="/dashboard/all-post"
-                className={`p-5 flex items-center gap-5 my-1 rounded-lg hover:bg-white  ${
+                className={`p-5 flex items-center gap-5 my-1 rounded-lg border-[1px]   ${
                   pathname === "/dashboard/all-post" &&
-                  "bg-white text-[#17c1e8] font-semibold shadow-lg"
+                  "text-[#17c1e8] font-semibold shadow-lg"
                 } `}
               >
                 <BsFillPostcardFill />

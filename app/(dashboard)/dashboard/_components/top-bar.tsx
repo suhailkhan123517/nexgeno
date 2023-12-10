@@ -1,4 +1,5 @@
 "use client";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { MdLogout, MdOutlineChat, MdPublic, MdSearch } from "react-icons/md";
@@ -8,8 +9,8 @@ const TopBar = () => {
 
   return (
     <>
-      <div className="p-5 rounded-lg bg-white shadow-lg flex items-center justify-between">
-        <div className="flex items-center gap-5 bg-gray-100 p-2 rounded-lg">
+      <div className="p-5 border-[1px] rounded-lg  shadow-lg flex items-center justify-between">
+        <div className="flex items-center gap-5  p-2 rounded-lg border-[1px]">
           <MdSearch />
           <input
             type="text"
@@ -18,7 +19,7 @@ const TopBar = () => {
           />
         </div>
         <div className="flex items-center gap-5">
-          <div className="flex gap-5">
+          <div className="flex gap-5 items-center">
             <MdPublic
               onClick={() => router.push("/blog")}
               className="cursor-pointer"
@@ -28,6 +29,9 @@ const TopBar = () => {
             <button onClick={() => signOut()}>
               <MdLogout size={20} />
             </button>
+            <div>
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </div>
