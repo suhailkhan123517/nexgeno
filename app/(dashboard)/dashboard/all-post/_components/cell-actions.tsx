@@ -15,6 +15,7 @@ import { AlertModal } from "@/components/modals/alert-modal";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { Post } from "@prisma/client";
+import baseUrl from "@/lib/baseUrl";
 
 interface CellActionsProps {
   data: Post;
@@ -61,10 +62,14 @@ const CellActions: React.FC<CellActionsProps> = ({ data }) => {
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuLabel>Actions</DropdownMenuLabel>
-          <DropdownMenuItem onClick={() => onCopy(`/blog/${data.id}`)}>
+          <DropdownMenuItem
+            onClick={() => onCopy(`${baseUrl}/blog/${data.id}`)}
+          >
             <Copy className="mr-2 h-4 w-4" /> Copy URL
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => router.push("")}>
+          <DropdownMenuItem
+            onClick={() => router.push(`${baseUrl}/blog/${data.id}`)}
+          >
             <Eye className="mr-2 h-4 w-4" /> View
           </DropdownMenuItem>
           <DropdownMenuItem
