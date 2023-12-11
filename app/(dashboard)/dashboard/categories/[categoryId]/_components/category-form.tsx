@@ -61,41 +61,10 @@ const CategoryForm: React.FC<CategoryFormProps> = ({ initialData }) => {
     }
   };
 
-  const onDelete = async () => {
-    try {
-      await axios.delete(`/api/categories/${params.categoryId}`);
-      router.refresh();
-      router.push(`/dashboard/categories`);
-      toast.success("Category deleted.");
-    } catch (error: any) {
-      toast.error(
-        "Make sure you removed all  categories using this Post first."
-      );
-    } finally {
-      setOpen(false);
-    }
-  };
-
   return (
     <>
-      <AlertModal
-        isOpen={open}
-        onClose={() => setOpen(false)}
-        onConfirm={onDelete}
-        loading={isSubmitting}
-      />
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between pb-3">
         <Heading title="Edit Category" description="Edit a Category." />
-        {initialData && (
-          <Button
-            disabled={isSubmitting}
-            variant="destructive"
-            size="sm"
-            onClick={() => setOpen(true)}
-          >
-            <Trash className="h-4 w-4" />
-          </Button>
-        )}
       </div>
       <Separator />
       <Form {...form}>

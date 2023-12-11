@@ -62,7 +62,7 @@ const AuthForm = () => {
   return (
     <>
       <div className="max-w-5xl mx-auto flex md:items-center md:justify-center p-6">
-        <div className="w-full bg-white max-w-lg relative py-8 px-10 shadow-2xl  rounded-3xl">
+        <div className="w-full border-[1px] max-w-lg relative py-8 px-10 shadow-2xl  rounded-3xl">
           <Image
             src="/logo.webp"
             alt="logo"
@@ -70,7 +70,7 @@ const AuthForm = () => {
             height={100}
             className="object-contain"
           />
-          <h1 className="font-satoshi font-semibold text-lg text-black tracking-wide mt-4">
+          <h1 className="font-satoshi font-semibold text-lg  tracking-wide mt-4">
             Register Employ
           </h1>
           <p className="text-sm text-gray-600">to continue to Nexgeno</p>

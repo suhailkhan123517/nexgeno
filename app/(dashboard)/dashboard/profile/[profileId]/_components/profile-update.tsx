@@ -41,7 +41,11 @@ const ProfileUpdate: React.FC<ProfileUpdateProps> = ({ user }) => {
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: user,
+    defaultValues: {
+      name: user?.name || "",
+      title: user?.title || "",
+      imageUrl: user?.imageUrl || "",
+    },
   });
 
   const { isSubmitting, isValid } = form.formState;
@@ -130,7 +134,7 @@ const ProfileUpdate: React.FC<ProfileUpdateProps> = ({ user }) => {
                     Please wait
                   </>
                 ) : (
-                  <>Submit</>
+                  <>Save Changes</>
                 )}
               </Button>
             </div>

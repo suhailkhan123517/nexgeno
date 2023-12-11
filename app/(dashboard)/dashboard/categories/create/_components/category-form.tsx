@@ -87,7 +87,7 @@ const CategoryForm = () => {
                   Please wait
                 </>
               ) : (
-                <>Save Changes</>
+                <>Submit</>
               )}
             </Button>
           </div>

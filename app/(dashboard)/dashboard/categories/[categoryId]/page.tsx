@@ -9,7 +9,7 @@ const CategoryPage = async ({ params }: { params: { categoryId: string } }) => {
   });
   return (
     <>
-      <div className="pt-6">
+      <div className="pt-6 max-w-lg">
         <CategoryForm initialData={category} />
       </div>
     </>

@@ -15,7 +15,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import ImageUpload from "@/components/ui/image-upload";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
@@ -47,7 +46,11 @@ const EmployUpdate: React.FC<EmployUpdateProps> = ({
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: initialData,
+    defaultValues: {
+      name: initialData?.name || "",
+      title: initialData?.title || "",
+      role: initialData?.role || "",
+    },
   });
 
   const { isSubmitting, isValid } = form.formState;
@@ -65,7 +68,7 @@ const EmployUpdate: React.FC<EmployUpdateProps> = ({
   return (
     <>
       <div className="max-w-3xl mx-auto mt-10">
-        <h1 className="text-2xl">Update Profile</h1>
+        <h1 className="text-2xl">Update Employ Details</h1>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
@@ -130,7 +133,7 @@ const EmployUpdate: React.FC<EmployUpdateProps> = ({
                     Please wait
                   </>
                 ) : (
-                  <>Submit</>
+                  <>Save Changes</>
                 )}
               </Button>
             </div>

@@ -55,7 +55,15 @@ const PostForm = ({ options, initialData }: PostFormProps) => {
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: initialData,
+    defaultValues: {
+      title: initialData?.title || "",
+      description: initialData?.description || "",
+      textEditor: initialData?.textEditor || "",
+      categoryId: initialData?.categoryId || "",
+      imageUrl: initialData?.imageUrl || "",
+      metaTitle: initialData?.metaTitle || "",
+      metaDesc: initialData?.metaDesc || "",
+    },
   });
 
   const { isSubmitting, isValid } = form.formState;
@@ -202,7 +210,7 @@ const PostForm = ({ options, initialData }: PostFormProps) => {
                       Please wait
                     </>
                   ) : (
-                    <>Submit</>
+                    <>Save Changes</>
                   )}
                 </Button>
               </div>

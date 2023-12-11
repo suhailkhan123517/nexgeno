@@ -40,11 +40,6 @@ const CellActions: React.FC<CellActionsProps> = ({ data }) => {
     }
   };
 
-  const onCopy = (id: string) => {
-    navigator.clipboard.writeText(id);
-    toast.success("Employ URL copied to clipboard.");
-  };
-
   return (
     <>
       <AlertModal
