@@ -44,9 +44,11 @@ const Navbar = () => {
             </Link>
             <div className="flex items-center gap-10">
               <ul>
-                <li className="text-xl font-semibold">+91 90044 66166 </li>
+                <li className="text-xl max-md:hidden font-semibold">
+                  +91 90044 66166{" "}
+                </li>
               </ul>
-              <button className="btn">Get Quick Quote</button>
+              <button className="btn max-md:hidden">Get Quick Quote</button>
             </div>
           </div>
         </div>

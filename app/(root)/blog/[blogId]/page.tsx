@@ -17,8 +17,8 @@ const BlogIdPage = async ({ params }: { params: { blogId: string } }) => {
   return (
     <>
       <section>
-        <div className="container mx-auto">
-          <div className="grid grid-cols-2 gap-5">
+        <div className="container mx-auto mt-10">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
             <div className="mt-5 flex flex-col gap-6">
               <h5 className="text-pink-600 text-xl font-medium">
                 {post?.category?.catName}

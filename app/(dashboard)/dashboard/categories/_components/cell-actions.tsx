@@ -63,12 +63,12 @@ const CellActions: React.FC<CellActionsProps> = ({ data }) => {
         <DropdownMenuContent align="end">
           <DropdownMenuLabel>Actions</DropdownMenuLabel>
           <DropdownMenuItem
-            onClick={() => onCopy(`${baseUrl}/blog/${data.id}`)}
+            onClick={() => onCopy(`${baseUrl}/blog/category/${data.id}`)}
           >
             <Copy className="mr-2 h-4 w-4" /> Copy URL
           </DropdownMenuItem>
           <DropdownMenuItem
-            onClick={() => router.push(`${baseUrl}/blog/${data.id}`)}
+            onClick={() => router.push(`${baseUrl}/blog/category/${data.id}`)}
           >
             <Eye className="mr-2 h-4 w-4" /> View
           </DropdownMenuItem>

@@ -37,13 +37,13 @@ const BlogClient = async () => {
         <>
           {" "}
           <section>
-            <div className="container mx-auto mt-5 mb-20">
-              <div className="grid grid-cols-2 gap-10 ">
+            <div className="container mx-auto mt-5 my-20">
+              <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 ">
                 <div>
                   {firstPost ? (
                     <>
                       <Link href={`/blog/${firstPost.id}`}>
-                        <div className="relative w-full h-[350px] rounded-lg">
+                        <div className="relative w-full md:h-[350px] h-[200px] rounded-lg">
                           <Image
                             src={`${firstPost.imageUrl}`}
                             fill={true}
@@ -93,7 +93,7 @@ const BlogClient = async () => {
                         className="grid grid-cols-3 gap-5 mb-3"
                       >
                         <Link className="" href={`/blog/${item.id}`}>
-                          <div className="relative h-[130px] w-[200px]">
+                          <div className="relative xl:h-[130px] lg:h-[100px] xl:w-[200px] lg:w-[160px] h-[130px] w-full">
                             <Image
                               src={`${item.imageUrl}`}
                               fill={true}
@@ -104,7 +104,7 @@ const BlogClient = async () => {
                         </Link>
                         <div className="col-span-2 ">
                           <Link href={`/blog/${item.id}`}>
-                            <h2 className="text-xl font-semibold text-black">
+                            <h2 className="xl:text-xl text-lg font-semibold text-black">
                               {item.title}
                             </h2>
                           </Link>
@@ -179,7 +179,7 @@ const BlogClient = async () => {
                         </div>
                         <div className="flex-auto">
                           <Link href={`/blog/${item.id}`}>
-                            <div className="relative w-[350px] h-[220px]">
+                            <div className="relative md:w-[350px]  h-[220px] max-md:hidden">
                               <Image
                                 src={`${item.imageUrl}`}
                                 fill={true}
