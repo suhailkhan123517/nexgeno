@@ -55,7 +55,9 @@ const BlogClient = async () => {
                           <h2 className="text-xl font-semibold text-black">
                             {firstPost.title}
                           </h2>
-                          <p className="desc mt-3">{firstPost.description}</p>
+                          <p className="desc mt-3 line-clamp-3">
+                            {firstPost.description}
+                          </p>
                         </div>
                       </Link>
                       <div>
@@ -104,7 +106,7 @@ const BlogClient = async () => {
                         </Link>
                         <div className="col-span-2 ">
                           <Link href={`/blog/${item.id}`}>
-                            <h2 className="xl:text-xl text-lg font-semibold text-black">
+                            <h2 className="xl:text-xl text-base line-clamp-2 font-semibold text-black">
                               {item.title}
                             </h2>
                           </Link>
@@ -153,10 +155,12 @@ const BlogClient = async () => {
                             href={`/blog/${item.id}`}
                             className="mt-6"
                           >
-                            <h2 className="text-2xl font-semibold text-black mb-3">
+                            <h2 className="md:text-2xl text-lg font-semibold text-black mb-3">
                               {item.title}
                             </h2>
-                            <p className="desc mb-3">{item.description}</p>
+                            <p className="desc mb-3 max-md:hidden line-clamp-3">
+                              {item.description}
+                            </p>
                           </Link>
                           <div className="flex items-center gap-2 mt-2">
                             <span className="text-gray-600 hover:text-pink-600 transition-all duration-200 ">

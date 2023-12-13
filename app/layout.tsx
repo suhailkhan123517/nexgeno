@@ -7,8 +7,14 @@ import AuthProvider from "@/providers/auth-providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nexgeno Technology",
+  title: {
+    default: "Nexgeno Technology",
+    template: "%s - Nexgeno Technology",
+  },
   description: "Nexgeno Technology Private Limited Company",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

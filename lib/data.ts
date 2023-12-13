@@ -60,7 +60,7 @@ export const solutions = [
     id: 4,
     img: "/development.webp",
     title: "Digital Transformation",
-    desc: ": Navigating the digital landscape with  confidence and innovation.",
+    desc: "Navigating the digital landscape with  confidence and innovation.",
   },
   {
     id: 5,
