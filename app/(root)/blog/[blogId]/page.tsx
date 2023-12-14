@@ -4,6 +4,12 @@ import { format } from "date-fns";
 import { Preview } from "@/components/preview";
 import { Metadata } from "next";
 
+export async function generateStaticParams() {
+  const post = await db.post.findMany();
+
+  return post.map(({ id }) => id);
+}
+
 export async function generateMetadata({
   params,
 }: {

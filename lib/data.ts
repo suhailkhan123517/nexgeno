@@ -87,23 +87,82 @@ export const WorkData = [
   },
   {
     id: 3,
-    img: "/Passport-Lifestyle.jpg",
-  },
-  {
-    id: 4,
     img: "/cancari_desktop.jpg",
   },
   {
+    id: 4,
+    img: "/Mauritius-Dental-Association.jpg",
+  },
+  {
     id: 5,
-    img: "/thelastbite_desktop_portfolio.jpg",
+    img: "/escrowwv_portfiolo.jpg",
   },
   {
     id: 6,
-    img: "/attari_lmd.jpg",
+    img: "/gecir_stories.jpg",
   },
   {
     id: 7,
-    img: "/greenhabits_portfolio_desktop.jpg",
+    img: "/party_prince_d.png",
+  },
+  {
+    id: 8,
+    img: "/v2.jpg",
+  },
+  {
+    id: 9,
+    img: "/vmarsh.jpg",
+  },
+];
+
+export const testimonial = [
+  {
+    id: 1,
+    img: "/sonali.png",
+    name: "Sonali Vaidya",
+    country: "India",
+    comment:
+      "    Great team! They are super flexible, responsive, and detailed. Nexgeno Technology helped us launch an entirely new website - their module system is amazing. As someone who is not an expert in managing a website I am glad I can rely on Nexgeno Technology to help me and give advice on best practices. Would highly recommend!",
+  },
+  {
+    id: 2,
+    img: "/r.png",
+    name: "Rajesh Oberoi",
+    country: "India",
+    comment:
+      "Working with Nexgeno technology pvt ltd on my site was such a pleasure. Arif and his team always so friendly, professional, and happy to help me with any questions and concerns about my site. I would definitely recommend her to anyone looking for a professional web designer for their project.",
+  },
+  {
+    id: 3,
+    img: "/omar.png",
+    name: "Omar S",
+    country: "India",
+    comment:
+      "Best for App development company, we have something different type of requirements but they where able to understand and it was great to communicate from there team as per our time zone, we are located at South Africa Durban but pleasure working with them.",
+  },
+  {
+    id: 4,
+    img: "/sonali.png",
+    name: "Sonali Vaidya",
+    country: "India",
+    comment:
+      "    Great team! They are super flexible, responsive, and detailed. Nexgeno Technology helped us launch an entirely new website - their module system is amazing. As someone who is not an expert in managing a website I am glad I can rely on Nexgeno Technology to help me and give advice on best practices. Would highly recommend!",
+  },
+  {
+    id: 5,
+    img: "/r.png",
+    name: "Rajesh Oberoi",
+    country: "India",
+    comment:
+      "Working with Nexgeno technology pvt ltd on my site was such a pleasure. Arif and his team always so friendly, professional, and happy to help me with any questions and concerns about my site. I would definitely recommend her to anyone looking for a professional web designer for their project.",
+  },
+  {
+    id: 6,
+    img: "/omar.png",
+    name: "Omar S",
+    country: "India",
+    comment:
+      "Best for App development company, we have something different type of requirements but they where able to understand and it was great to communicate from there team as per our time zone, we are located at South Africa Durban but pleasure working with them.",
   },
 ];
 
@@ -196,5 +255,177 @@ export const accordions = [
       "What's the first step to starting a project with Nexgeno Technology?",
     answer:
       "Contact us today by phone at +91 90044 66166 or through email at  info@nexgeno.in to initiate a discussion about your project's needs and objectives.",
+  },
+];
+
+export const ecommerceExpert = [
+  {
+    id: 1,
+    img: "/ecommerce/branding_design.png",
+    title: "Branding",
+    desc: "We include a clear message, content, value, and social media to promote your brand identity online in less time.",
+  },
+  {
+    id: 2,
+    img: "/ecommerce/ecommerce_customize.png",
+    title: "Customizable eCommerce Website",
+    desc: "Our designers use a responsive way to make your site alluring. We at OrangeMantra help you in tweaking the themes and modules of your eCommerce business as per your business prerequisite. ",
+  },
+  {
+    id: 3,
+    img: "/ecommerce/platform.png",
+    title: " Platform Selection",
+    desc: " Beyond helping you decide the best and appropriate platform, we customize and make the store unique as per your business value. ",
+  },
+  {
+    id: 4,
+    img: "/ecommerce/shopping-cart.png",
+    title: "Shopping Experience Tools",
+    desc: "Easy add to cart, wishlist, simplified checkout, flexible payment gateway options, and more for enhanced shopping experiences.",
+  },
+  {
+    id: 5,
+    img: "/ecommerce/social-media.png",
+    title: "Social media integration",
+    desc: "Get extensive social media benefits through online product sharing on Twitter, Facebook, Instagram, and, etc.",
+  },
+  {
+    id: 6,
+    img: "/ecommerce/user-interface.png",
+    title: "User Interface",
+    desc: " By anticipating what users might look for, we create interface elements that are intuitive and navigated easily.",
+  },
+];
+
+export const ecommerceSolutions = [
+  {
+    id: 1,
+    img: "/ecommerce/custom_integration.png",
+    title: "Custom E-commerce Integration",
+    desc: "Take your E-commerce venture to a whole new level and move ahead of the rest with customized E-Commerce solutions.",
+  },
+  {
+    id: 2,
+    img: "/ecommerce/portal_development.png",
+    title: "E-Commerce Portal Development",
+    desc: "Avail of reliable E-Commerce web development and customization services to build solutions that match the client’s requirements.",
+  },
+  {
+    id: 3,
+    img: "/ecommerce/b2b.png",
+    title: "B2B and B2C E-Commerce Solutions",
+    desc: "Explore our expertise in creating high-performance, feature-rich shopping B2B E-Commerce solutions that drive conversions and profit.",
+  },
+  {
+    id: 4,
+    img: "/ecommerce/customer-service.png",
+    title: "E-Commerce Support & Maintenance",
+    desc: "One-stop shop for all your tech support, version upgrade, and maintenance requirements fulfilled promptly and efficiently. ",
+  },
+  {
+    id: 5,
+    img: "/ecommerce/payment-gateway.png",
+    title: "Payment Gateway Integration",
+    desc: "Integrate multiple payment gateways into the business stores to facilitate simple and secure online transactions. ",
+  },
+  {
+    id: 6,
+    img: "/ecommerce/web-development.png",
+    title: "Plugin & Module Development",
+    desc: "Empower your business with high-end plugins and modules that enrich your E-Commerce stores with new features and functionalities. ",
+  },
+];
+
+export const ecommerceClientLogo = [
+  {
+    id: 1,
+    img: "/ecommerce/euro_tent.jpeg",
+    alt: "Euro Tent",
+  },
+  {
+    id: 2,
+    img: "/geci.webp",
+    alt: "GEC India Logo",
+  },
+  {
+    id: 3,
+    img: "/ecommerce/tent_online.png",
+    alt: "Tents Online",
+  },
+  {
+    id: 4,
+    img: "/lehnaar.webp",
+    alt: "Lehnaar Logo",
+  },
+  {
+    id: 5,
+    img: "/mda.webp",
+    alt: "MDA Logo",
+  },
+  {
+    id: 6,
+    img: "/euro_detnal.webp",
+    alt: "Euro Dental Logo",
+  },
+];
+
+export const ecommerceAccordions = [
+  {
+    id: 1,
+    question:
+      "How Can I Choose The Best Platform For My Ecommerce Business Website?",
+    answer:
+      "Before getting started with your ecommerce web development, consider the few fundamentals that can help to choose the best platform. Always consider the items that you are selling. Some ecommerce platforms can handle inventory tracking and multiple product options while some others will not. Consider the design options, payment gateways, security of the site, integration with other tools, features and pricing before finalizing on the platform.",
+  },
+  {
+    id: 2,
+    question: " What Are The Main Activities Of Ecommerce Sites?",
+    answer:
+      " Ecommerce websites help online shoppers make a safe purchase from online stores and they are considered as platforms that help in buying and selling. It also helps in gathering and using demographics data from various channels and improves the customer service.",
+  },
+  {
+    id: 3,
+    question: "Why Is Ecommerce Needed For Any Business? ",
+    answer:
+      " Ecommerce has gained much popularity nowadays because it offers business a whole range of opportunities ranging from marketing opportunities to increasing the range of products that helps to generate sales. It is with an optimized and well created e-store that you can easily create and achieve the goals and also offer the customers round the clock support services. ",
+  },
+  {
+    id: 4,
+    question: "What Are The Different Types Of Ecommerce? ",
+    answer:
+      " Ecommerce or internet commerce is basically related with different types of business transactions. The main four ways of ecommerce business is Business to business or B2B, Business to Customer B2C, Customer to Business (C2B and Customer to Customer C2C. ",
+  },
+  {
+    id: 5,
+    question: " How Should I Promote My Ecommerce Site?",
+    answer:
+      " There are various ways to do this and the first thing to do is to promote the site to all the customers. This will help to increase your customer base. Your website address should be present on every advertisement that your company invests in. Register with the search engines and optimize your website as this will affect the traffic of your site. ",
+  },
+  {
+    id: 6,
+    question:
+      " What Are The Important Things That Can Turn Browsers Into Buyers? ",
+    answer:
+      " Create your site so that it is much more oriented towards sales rather than marketing. Let your visitors see your products immediately instead of hiding them behind lots of marketing copy. Make a page that reads the terms and conditions as it will offer a professional look. Provide your contact details and explain your return policies, security, encryption methods and payment options.",
+  },
+  {
+    id: 7,
+    question: " How To Create An Impressive Website? ",
+    answer:
+      " The beauty of a site lies in the way it operates and how user friendly it is. Ensure that your site is fast, easy to use, professional and attractive. Also make sure that you are able to fulfill the orders very promptly without any delay. In case you are unable to offer the service, make sure that your customer is informed about it via email. ",
+  },
+  {
+    id: 8,
+    question:
+      " What Are The Security Risks That Are Involved With Ecommerce Sites? ",
+    answer:
+      " Ecommerce website owners should always keep in mind the t hree dimensions of security – confidentiality, integrity and availability. Business owners should develop a good strategy that can help to make the site and transactions secured. To avoid any hackers gain access to important confidential data, include encryption methods for any data transactions. ",
+  },
+  {
+    id: 9,
+    question:
+      " Is There Any Limit On The Size Of My Product Or Customer Database? ",
+    answer:
+      "No, as such there are no limits on the size. The biggest benefit of having an online store is that you can add unlimited products and catalogues and at the same time you can grow your customer base as you require. ",
   },
 ];
