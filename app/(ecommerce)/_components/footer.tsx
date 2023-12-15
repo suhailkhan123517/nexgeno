@@ -1,6 +1,7 @@
 import Whatsapp from "@/components/whatsapp";
 import Image from "next/image";
 import Link from "next/link";
+import Call from "./call";
 
 const Footer = () => {
   return (
@@ -36,6 +37,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      {/* <Call /> */}
       <Whatsapp />
     </>
   );
