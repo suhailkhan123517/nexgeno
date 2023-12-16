@@ -4,7 +4,7 @@ import { ecommerceSolutions } from "@/lib/data";
 const Solutions = () => {
   return (
     <>
-      <section className="md:mb-20  mb-10 md:py-16 py-8   bg-[#fffbfd]">
+      <section className="md:py-16 py-8   bg-[#fffbfd]">
         <div className="container mx-auto">
           <h2 className="heading text-center ">
             Our E-commerce <br /> Development Services
@@ -14,11 +14,11 @@ const Solutions = () => {
             {ecommerceSolutions.map((item) => (
               <div
                 key={item.id}
-                className="border bg-white hover:border-pink-600 hover:shadow-xl transition duration-200 rounded-2xl    flex  flex-col xl:px-6 px-4 py-8"
+                className="border bg-white hover:border-pink-600 hover:shadow-xl transition duration-200 rounded-2xl px-3 py-5"
               >
-                <div className="flex items-center xl:flex-row flex-col  gap-4">
-                  <div className="w-28">
-                    <div className="w-24 h-24 rounded-ful  relative">
+                <div className="flex items-center xl:flex-row flex-col  gap-2">
+                  <div className="w-24">
+                    <div className="w-16 h-16 relative">
                       <Image
                         src={item.img}
                         alt="Hire Developer Icon"
@@ -27,10 +27,10 @@ const Solutions = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-black mb-2 px-2 ">
+                    <h3 className="text-base font-semibold text-black mb-2 px-2">
                       {item.title} <br className="max-md:hidden" />
                     </h3>
-                    <p className="desc px-2 line-clamp-3 mb-0">{item.desc}</p>
+                    <p className="desc px-2 line-clamp-2 mb-0">{item.desc}</p>
                   </div>
                 </div>
               </div>

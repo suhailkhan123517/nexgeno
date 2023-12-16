@@ -14,11 +14,11 @@ const Solutions = () => {
             {solutions.map((item) => (
               <div
                 key={item.id}
-                className="border bg-white hover:border-pink-600 hover:shadow-xl transition duration-200 rounded-2xl   xl:h-[218px] lg:h-[330px] flex  flex-col xl:px-6 px-4 py-8"
+                className="border bg-white hover:border-pink-600 hover:shadow-xl transition duration-200 rounded-2xl px-3 py-5"
               >
-                <div className=" flex items-center xl:flex-row flex-col  gap-4">
-                  <div className="w-28">
-                    <div className="w-24 h-24 rounded-ful  relative">
+                <div className="flex items-center xl:flex-row flex-col  gap-2">
+                  <div className="w-24">
+                    <div className="w-16 h-16 relative">
                       <Image
                         src={item.img}
                         alt="Hire Developer Icon"
@@ -27,10 +27,10 @@ const Solutions = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-black mb-2 px-2 ">
-                      {item.title} <br className="max-md:hidden" /> Solutions
+                    <h3 className="text-base font-semibold text-black mb-2 px-2 ">
+                      {item.title} <br className="max-md:hidden" />
                     </h3>
-                    <p className="desc mb-4 px-2">{item.desc}</p>
+                    <p className="desc  px-2 line-clamp-2 ">{item.desc}</p>
                   </div>
                 </div>
               </div>

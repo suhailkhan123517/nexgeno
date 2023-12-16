@@ -16,11 +16,11 @@ const Expert = () => {
             {expert.map((item) => (
               <div
                 key={item.id}
-                className="border-[1px] hover:border-pink-600 hover:shadow-xl transition duration-200 rounded-2xl   flex items-center flex-col"
+                className="border-[1px] hover:border-pink-600 hover:shadow-xl transition duration-200 rounded-2xl"
               >
-                <div className=" bg-[#fffbfd] border-b w-full py-5 px-5 rounded-2xl flex xl:flex-row flex-col gap-4 items-center">
-                  <div className="w-28">
-                    <div className="w-24 h-24 rounded-ful  relative">
+                <div className=" bg-[#fffbfd] border-b w-full py-5 px-3 rounded-2xl flex xl:flex-row flex-col gap-2 items-center">
+                  <div className="w-24">
+                    <div className="w-16 h-16 relative">
                       <Image
                         src={item.img}
                         alt="Hire Developer Icon"
@@ -30,19 +30,14 @@ const Expert = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-black mb-2 px-2 line-clamp-1">
+                    <h3 className="text-base font-semibold text-black mb-2 px-2">
                       {item.title}
                     </h3>
-                    <p className="desc mb-4 px-2 line-clamp-3">{item.desc}</p>
+                    <p className="desc  px-2 line-clamp-3">{item.desc}</p>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-          <div className="grid place-items-center">
-            <button className="btn flex items-center flex-row gap-3">
-              View All <BsArrowRight />{" "}
-            </button>
           </div>
         </div>
       </section>

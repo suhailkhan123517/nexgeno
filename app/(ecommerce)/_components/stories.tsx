@@ -3,7 +3,7 @@ import Image from "next/image";
 const Stories = () => {
   return (
     <>
-      <section className="md:mb-24 mb-12 bg-[#fffbfd] md:py-20 py-10">
+      <section className="bg-[#fffbfd] md:py-20 py-10">
         <div className="container mx-auto">
           <h1 className="heading mb-10">Client Success Stories</h1>
           <div className="grid lg:grid-cols-3 gap-5">

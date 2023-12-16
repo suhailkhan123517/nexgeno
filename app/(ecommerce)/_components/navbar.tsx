@@ -35,7 +35,7 @@ const Navbar = () => {
             <Link href="/">
               <div className="relative w-[200px] h-[50px]">
                 <Image
-                  src="/ecommerce/ecologo.png"
+                  src="/logo.webp"
                   alt="Nexgeno Logo"
                   fill={true}
                   className="object-contain"

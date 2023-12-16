@@ -9,7 +9,7 @@ import { WorkData } from "@/lib/data";
 const Work = () => {
   return (
     <>
-      <section className="md:mb-20 mb-10">
+      <section className="md:py-20 py-10">
         <div className="container mx-auto">
           <div className="flex justify-between items-center mb-10">
             <h2 className="heading">Our Recent Work</h2>

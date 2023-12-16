@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Client() {
   return (
     <>
-      <section className="md:mb-20 mb-10">
+      <section className="md:py-20 py-10">
         <div className="container m-auto">
           <div className="grid md:grid-cols-6 md:gap-0  grid-cols-3  place-items-center">
             {ecommerceClientLogo.map((item) => (
