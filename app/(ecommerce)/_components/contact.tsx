@@ -13,16 +13,16 @@ export default function Contact() {
               <h1 className="md:text-[60px] md:leading-[85px] sm:text-5xl text-3xl mt-10 leading-snug font-bold">
                 Together, Let&apos;s Make A Difference.
               </h1>
-              <div className="flex items-start gap-3 bg-black rounded-md p-5 my-5">
+              <div className="flex items-start gap-3 bg-black rounded-md md:p-5 p-3">
                 <div className="iconBox">
                   <AiFillMobile className="text-3xl" />
                 </div>
                 <div className="flex flex-col sm:gap-5 gap-1">
-                  <p className="text-xl sm:text-[19px] font-semibold">
+                  <p className="text-xl sm:text-[14px] font-semibold">
                     Speak with a strategist:
                   </p>
                   <Link
-                    className="text-sm leading-[42px] md:text-[32px] font-bold"
+                    className="text-sm md:leading-[42px] md:text-[32px] font-bold"
                     href="#"
                   >
                     +91 90044 66166 / +91 9773375525
@@ -31,7 +31,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="relative col-span-2">
-              <form className="bg-white rounded-md shadow-lg w-full sm:my-8 my-5 py-12 px-12  flex flex-col gap-4 sm:gap-10 lg:absolute ">
+              <form className="bg-white rounded-md shadow-lg w-full sm:my-8 my-5 py-5 px-5  flex flex-col gap-4 sm:gap-10 lg:absolute ">
                 <h2 className="heading text-center">Enquire Now</h2>
                 <div className="form_field flex flex-col  sm:gap-2">
                   <label htmlFor="name" className="inline-block  mb-0">

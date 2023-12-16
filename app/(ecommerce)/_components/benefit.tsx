@@ -8,7 +8,7 @@ const Benefit = () => {
           <h2 className="heading text-center ">
             Benefits of Having an <br /> E-Commerce Website
           </h2>
-          <div className="grid grid-cols-6 gap-5 mt-10">
+          <div className="grid xl:grid-cols-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1  gap-5 mt-10">
             <div className="flex items-center  flex-col gap-2 text-center">
               <div className="h-[150px]">
                 <Image

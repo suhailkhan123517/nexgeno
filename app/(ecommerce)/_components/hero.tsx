@@ -7,10 +7,10 @@ const Hero = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-5 grid-cols-1 ">
             <div className="col-span-3">
-              <h1 className="xl:text-7xl  md:text-5xl  text-4xl font-semibold  bg-gradient-to-r from-cyan-400 via-pink-500 to-pink-600 bg-clip-text text-transparent drop-shadow-md md:mb-3 mb-5">
+              <h1 className="xl:text-7xl  md:text-5xl  text-4xl font-semibold  bg-gradient-to-r from-cyan-400 via-pink-500 to-pink-600 bg-clip-text text-transparent drop-shadow-md md:mb-3 mb-5  max-md:text-center">
                 Web Design for <br /> E-Commerce
               </h1>
-              <h1 className="xl:text-5xl  md:text-4xl  text-2xl font-semibold lg:mt-0 md:mt-5 mt-3 max-md:mb-5">
+              <h1 className="xl:text-5xl max-md:text-center  md:text-4xl  text-2xl font-semibold lg:mt-0 md:mt-5 mt-3 max-md:mb-5">
                 We Create Stunning <br /> Online Stores
               </h1>
 
@@ -20,7 +20,7 @@ const Hero = () => {
                 customer experience with up to 90% faster speeds.
               </p>
 
-              <div className="flex flex-row gap-5 md:mt-10 mt-5">
+              <div className="flex flex-row gap-5 md:mt-10 mt-5 max-md:justify-center">
                 <Link href="#" className="btn cursor-pointer">
                   Contact
                 </Link>
@@ -29,8 +29,20 @@ const Hero = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-span-2 xl:px-10">
-              <form className="shadow-xl flex flex-col xl:px-14 md:px-10 px-5 xl:py-20 md:py-14 py-8 gap-7 rounded-lg  bg-white lg:mt-0 mt-10">
+            <div className="col-span-2 xl:px-10 md:mt-0 mt-10">
+              <div className="border-[1px] rounded-lg border-pink-600 flex flex-col bg-white md:pt-10 pt-4 md:pb-7 pb-2">
+                <p className="text-xl text-center  font-semibold leading-tight">
+                  Get a Free Enquire Now
+                </p>
+                <iframe
+                  className="h-[430px]"
+                  src="https://mcrm.nexgeno.in/forms/wtl/251edc4899ec1207979e1f8770cdffe8"
+                  sandbox="allow-top-navigation allow-forms allow-same-origin allow-popups"
+                  allowFullScreen
+                ></iframe>
+              </div>
+
+              {/* <form className="shadow-xl flex flex-col xl:px-14 md:px-10 px-5 xl:py-20 md:py-14 py-8 gap-7 rounded-lg  bg-white lg:mt-0 mt-10">
                 <p className="md:text-3xl text-2xl font-semibold leading-tight">
                   Get a Free Enquire Now
                 </p>
@@ -55,7 +67,7 @@ const Hero = () => {
                 >
                   Submit
                 </button>
-              </form>
+              </form> */}
             </div>
           </div>
         </div>

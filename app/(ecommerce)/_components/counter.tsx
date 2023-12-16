@@ -62,7 +62,7 @@ const Counter = () => {
               </h4>
             </div>
             <div className="group  border hover:border-pink-500 border-gray-200 rounded-xl bg-[#fffbfd]    py-4 px-4    hover:shadow-xl text-center">
-              <h3 className="text-[#050748] lg:text-[25px] sm:text-[20px] text-[18px] leading-[32px] sm:leading-[43px] font-semibold text-center mb-6">
+              <h3 className="text-[#050748] lg:text-[25px] sm:text-[20px] text-[18px] leading-[32px] sm:leading-[43px] font-semibold text-center mb-2">
                 Want to Start Project
               </h3>
               <Link href="#" className="btn cursor-pointer">

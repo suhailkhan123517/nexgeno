@@ -10,7 +10,7 @@ const Solutions = () => {
             Our E-commerce <br /> Development Services
           </h2>
 
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  place-items-start xl:gap-10 gap-3 mt-14">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-10 gap-3 mt-14">
             {ecommerceSolutions.map((item) => (
               <div
                 key={item.id}
@@ -27,10 +27,12 @@ const Solutions = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-base font-semibold text-black mb-2 px-2">
+                    <h3 className="text-base font-semibold text-black mb-2 px-2 max-md:text-center">
                       {item.title} <br className="max-md:hidden" />
                     </h3>
-                    <p className="desc px-2 line-clamp-2 mb-0">{item.desc}</p>
+                    <p className="desc px-2 line-clamp-2 max-md:text-center">
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               </div>

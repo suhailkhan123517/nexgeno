@@ -29,10 +29,12 @@ const Expert = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-base font-semibold text-black mb-2 px-2">
+                    <h3 className="text-base font-semibold text-black mb-2 px-2 max-md:text-center">
                       {item.title}
                     </h3>
-                    <p className="desc  px-2 line-clamp-2">{item.desc}</p>
+                    <p className="desc  px-2 line-clamp-2 max-md:text-center">
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               </div>
