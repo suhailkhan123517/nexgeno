@@ -4,7 +4,7 @@ import { ecommerceSolutions } from "@/lib/data";
 const Solutions = () => {
   return (
     <>
-      <section className="md:py-16 py-8   bg-[#fffbfd]">
+      <section className="md:py-16 py-8 bg-[#fffbfd]">
         <div className="container mx-auto">
           <h2 className="heading text-center ">
             Our E-commerce <br /> Development Services
@@ -16,7 +16,7 @@ const Solutions = () => {
                 key={item.id}
                 className="border bg-white hover:border-pink-600 hover:shadow-xl transition duration-200 rounded-2xl px-3 py-5"
               >
-                <div className="flex items-center xl:flex-row flex-col  gap-2">
+                <div className="flex items-center xl:flex-row flex-col gap-2">
                   <div className="w-24">
                     <div className="w-16 h-16 relative">
                       <Image

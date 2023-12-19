@@ -51,15 +51,15 @@ const Login = () => {
 
       if (callback?.ok && !callback?.error) {
         toast.success("Logged In!");
-        router.push("/dashboard");
+        router.push("/admin/dashboard");
       }
     });
   };
 
   return (
     <>
-      <div className="max-w-5xl mx-auto flex md:items-center md:justify-center h-full p-6">
-        <div className="w-full max-w-lg relative py-8 px-10 shadow-2xl  rounded-3xl">
+      <div>
+        <div className="w-[520px] relative py-8 px-10 shadow-2xl  rounded-3xl">
           <Image
             src="/logo.webp"
             alt="logo"

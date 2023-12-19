@@ -2,10 +2,10 @@ import { withAuth } from "next-auth/middleware";
 
 export default withAuth({
   pages: {
-    signIn: "/sign-in",
+    signIn: "https://website.nexgeno.in/sign-in",
   },
 });
 
 export const config = {
-  matcher: ["/dashboard/:path*"],
+  matcher: ["/admin/:path*"],
 };

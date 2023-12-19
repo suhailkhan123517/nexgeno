@@ -31,6 +31,7 @@ model Post {
   publicId    String?
   metaTitle   String?
   metaDesc    String?
+  isPublished Boolean @default(false)
   categoryId  String? @db.ObjectId
   category    Category? @relation(fields: [categoryId], references: [id])
   authorId    String?   @db.ObjectId

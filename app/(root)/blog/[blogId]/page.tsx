@@ -18,6 +18,7 @@ export async function generateMetadata({
   const post = await db.post.findUnique({
     where: {
       id: params.blogId,
+      isPublished: true,
     },
   });
 

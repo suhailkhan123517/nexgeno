@@ -21,7 +21,7 @@ const AccordionItem = ({ open, toggle, title, desc }: AccordionItemProps) => {
           className="py-5 md:px-10 px-5 flex justify-between items-center cursor-pointer "
           onClick={toggle}
         >
-          <p className="text-xl font-semibold">{title}</p>
+          <p className="md:text-xl text-base font-semibold">{title}</p>
           <div>
             {open ? (
               <>
@@ -35,7 +35,7 @@ const AccordionItem = ({ open, toggle, title, desc }: AccordionItemProps) => {
           </div>
         </div>
         <Collapse isOpened={open}>
-          <div className="px-12 pb-7">{desc}</div>
+          <div className="md:px-12 px-6 text-sm pb-7">{desc}</div>
         </Collapse>
       </div>
     </>

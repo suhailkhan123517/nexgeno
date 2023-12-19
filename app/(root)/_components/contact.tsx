@@ -10,19 +10,19 @@ export default function Contact() {
         <div className="container m-auto">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
             <div className="col-span-3 lg:pr-10 text-white">
-              <h1 className="md:text-[60px] md:leading-[85px] sm:text-5xl text-3xl mt-10 leading-snug font-bold">
+              <h1 className="md:text-[60px] md:leading-[85px] sm:text-5xl text-3xl md:mt-10 max-md:mb-3 leading-snug font-bold">
                 Together, Let&apos;s Make A Difference.
               </h1>
-              <div className="flex items-start gap-3 bg-black rounded-md p-5 my-5">
+              <div className="flex items-start gap-3 bg-black rounded-md md:p-5 p-3">
                 <div className="iconBox">
                   <AiFillMobile className="text-3xl" />
                 </div>
                 <div className="flex flex-col sm:gap-5 gap-1">
-                  <p className="text-xl sm:text-[19px] font-semibold">
+                  <p className="text-xl sm:text-[14px] font-semibold">
                     Speak with a strategist:
                   </p>
                   <Link
-                    className="text-sm leading-[42px] md:text-[32px] font-bold"
+                    className="text-sm md:leading-[42px] md:text-[32px] font-bold"
                     href="#"
                   >
                     +91 90044 66166 / +91 9773375525
@@ -31,7 +31,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="relative col-span-2">
-              <form className="bg-white rounded-md shadow-lg w-full sm:my-8 my-5 py-12 px-12  flex flex-col gap-4 sm:gap-10 lg:absolute ">
+              <form className="bg-white rounded-md shadow-lg w-full sm:my-8 my-5 py-5 px-5  flex flex-col gap-4 sm:gap-10 lg:absolute ">
                 <h2 className="heading text-center">Enquire Now</h2>
                 <div className="form_field flex flex-col  sm:gap-2">
                   <label htmlFor="name" className="inline-block  mb-0">
@@ -104,34 +104,34 @@ export default function Contact() {
           <div className="grid text-[#444] grid-cols-1 lg:grid-cols-5 gap-0">
             <div className="col-span-3">
               <div className="location_box rounded-md mb-4 overflow-hidden sm:p-8 p-3 flex flex-col  gap-1">
-                <h1 className="sm:text-[32px] text-[25px] font-extrabold">
+                <h1 className="md:text-xl text-lg font-extrabold">
                   Registered Office
                 </h1>
-                <p className="sm:text-[18px] text-[15px] sm:leading-[32px] leading-[25px]">
+                <p className="desc">
                   <b>Address:</b> Shop no 2, Mohd Hussain Compound, Near
                   Maharashtra Weight Bridge, L.B.S. Marg, Kurla(W), Mumbai –
                   400070.
                 </p>
-                <p className="sm:text-[18px] text-[15px] sm:leading-[32px] leading-[25px]">
+                <p className="desc">
                   <b>Mobile No:</b> +91 90290 75525
                 </p>
-                <p className="sm:text-[18px] text-[15px] sm:leading-[32px] leading-[25px]">
+                <p className="desc">
                   <b>Email:</b> info@nexgeno.in{" "}
                 </p>
               </div>
               <div className="location_box rounded-md mb-4 overflow-hidden sm:p-8 p-3 flex flex-col  gap-1">
-                <h1 className="sm:text-[32px] text-[25px] font-extrabold">
+                <h1 className="md:text-xl text-lg font-extrabold">
                   Development office
                 </h1>
-                <p className="sm:text-[18px] text-[15px] sm:leading-[32px] leading-[25px]">
+                <p className="desc">
                   <b>Address:</b> Unit No. F-50, First Floor kohinoor City Mall
                   Opp Holly Cross School, Kurla (West) Mumbai, Maharashtra -
                   400070.
                 </p>
-                <p className="sm:text-[18px] text-[15px] sm:leading-[32px] leading-[25px]">
+                <p className="desc">
                   <b>Mobile No:</b> +91 90044 66166
                 </p>
-                <p className="sm:text-[18px] text-[15px] sm:leading-[32px] leading-[25px]">
+                <p className="desc">
                   <b>Email:</b> sales@nexgeno.in
                 </p>
               </div>

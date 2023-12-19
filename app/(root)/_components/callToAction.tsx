@@ -4,13 +4,13 @@ import React from "react";
 const CallToAction = () => {
   return (
     <>
-      <section className="md:mb-20 -scroll-mb-10">
+      <section className="md:mb-20 ">
         <div className="container mx-auto">
-          <div className="md:py-16 py-8 border border-pink-500 bg-[#fffbfd]  px-6 rounded-lg flex flex-col gap-5 items-center justify-center">
+          <div className="md:py-16 py-5 border border-pink-500 bg-[#fffbfd]  px-6 rounded-lg flex flex-col gap-5 items-center justify-center">
             <h2 className="heading text-center">
               Let&apos;s Discuss Your Project
             </h2>
-            <p className="text-center text-lg">
+            <p className="text-center md:text-lg text-base">
               Let us know your project idea and Get free consultation to turn it
               into an amazing digital product.
             </p>

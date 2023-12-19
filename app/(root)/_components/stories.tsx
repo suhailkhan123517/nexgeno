@@ -17,7 +17,7 @@ const Stories = () => {
                   className="rounded-t-2xl object-cover"
                 />
               </div>
-              <div className="py-14 px-10 ">
+              <div className="md:py-14 py-5 md:px-10 px-5 ">
                 <h2 className="heading mb-5">AbayaDesigner</h2>
                 <p className="desc line-clamp-4">
                   To overcome the challenges, the design team focused on
@@ -33,7 +33,7 @@ const Stories = () => {
             <div className="lg:col-span-2">
               <div className="grid lg:grid-cols-2 border-[1px] hover:border-pink-600 rounded-2xl bg-white">
                 <div>
-                  <div className="py-14 px-10 ">
+                  <div className="md:py-14 py-5 md:px-10 px-5">
                     <h2 className="heading mb-5">V2 Technologies</h2>
                     <p className="desc line-clamp-4">
                       We started by analyzing the company business goals, target
@@ -47,7 +47,7 @@ const Stories = () => {
                 <div>
                   <div className="relative w-full h-[300px]  ">
                     <Image
-                      src="/Backup_of_POST 44.jpg"
+                      src="/v2.jpg"
                       alt="project image"
                       fill={true}
                       priority
@@ -69,7 +69,7 @@ const Stories = () => {
                   </div>
                 </div>
                 <div>
-                  <div className="py-14 px-10 ">
+                  <div className="md:py-14 py-5 md:px-10 px-5">
                     <h2 className="heading mb-5">KUC Edibles</h2>
                     <p className="desc line-clamp-4">
                       To achieve the project objectives, the KUC Edibles team

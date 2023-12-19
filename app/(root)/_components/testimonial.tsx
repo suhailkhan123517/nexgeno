@@ -40,7 +40,7 @@ const Testimonial = () => {
           >
             <SwiperSlide>
               {" "}
-              <div className="border-[1px] bg-white hover:border-pink-600 py-8 px-5 rounded-xl h-[350px]">
+              <div className="border-[1px] bg-white hover:border-pink-600 py-8 px-5 rounded-xl h-[355px]">
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-5">
                     <Image
@@ -52,7 +52,9 @@ const Testimonial = () => {
                       className="rounded-full"
                     />
                     <div>
-                      <h3 className="text-xl font-semibold">Sonali Vaidya</h3>
+                      <h3 className="md:text-xl text-base font-semibold">
+                        Sonali Vaidya
+                      </h3>
                       <p>India</p>
                     </div>
                   </div>
@@ -65,7 +67,7 @@ const Testimonial = () => {
                   </div>
                 </div>
 
-                <div className="mt-10">
+                <div className="mt-10 desc pb-3">
                   Great team! They are super flexible, responsive, and detailed.
                   Nexgeno Technology helped us launch an entirely new website -
                   their module system is amazing. As someone who is not an
@@ -89,7 +91,9 @@ const Testimonial = () => {
                       className="rounded-full"
                     />
                     <div>
-                      <h3 className="text-xl font-semibold">Rajesh Oberoi</h3>
+                      <h3 className="md:text-xl text-base font-semibold">
+                        Rajesh Oberoi
+                      </h3>
                       <p>India</p>
                     </div>
                   </div>
@@ -102,7 +106,7 @@ const Testimonial = () => {
                   </div>
                 </div>
 
-                <div className="mt-10">
+                <div className="mt-10 desc pb-3">
                   Working with Nexgeno technology pvt ltd on my site was such a
                   pleasure. Arif and his team always so friendly, professional,
                   and happy to help me with any questions and concerns about my
@@ -125,7 +129,9 @@ const Testimonial = () => {
                       className="rounded-full"
                     />
                     <div>
-                      <h3 className="text-xl font-semibold">Omar S</h3>
+                      <h3 className="md:text-xl text-base font-semibold">
+                        Omar S
+                      </h3>
                       <p>India</p>
                     </div>
                   </div>
@@ -138,7 +144,7 @@ const Testimonial = () => {
                   </div>
                 </div>
 
-                <div className="mt-10">
+                <div className="mt-10 desc pb-3">
                   Best for App development company, we have something different
                   type of requirements but they where able to understand and it
                   was great to communicate from there team as per our time zone,
@@ -161,7 +167,9 @@ const Testimonial = () => {
                       className="rounded-full"
                     />
                     <div>
-                      <h3 className="text-xl font-semibold">Sonali Vaidya</h3>
+                      <h3 className="md:text-xl text-base font-semibold">
+                        Sonali Vaidya
+                      </h3>
                       <p>India</p>
                     </div>
                   </div>
@@ -174,7 +182,7 @@ const Testimonial = () => {
                   </div>
                 </div>
 
-                <div className="mt-10">
+                <div className="mt-10 desc pb-3">
                   Great team! They are super flexible, responsive, and detailed.
                   Nexgeno Technology helped us launch an entirely new website -
                   their module system is amazing. As someone who is not an
@@ -198,7 +206,9 @@ const Testimonial = () => {
                       className="rounded-full"
                     />
                     <div>
-                      <h3 className="text-xl font-semibold">Rajesh Oberoi</h3>
+                      <h3 className="md:text-xl text-base font-semibold">
+                        Rajesh Oberoi
+                      </h3>
                       <p>India</p>
                     </div>
                   </div>
@@ -211,7 +221,7 @@ const Testimonial = () => {
                   </div>
                 </div>
 
-                <div className="mt-10">
+                <div className="mt-10 desc pb-3">
                   Working with Nexgeno technology pvt ltd on my site was such a
                   pleasure. Arif and his team always so friendly, professional,
                   and happy to help me with any questions and concerns about my
@@ -234,7 +244,9 @@ const Testimonial = () => {
                       className="rounded-full"
                     />
                     <div>
-                      <h3 className="text-xl font-semibold">Omar S</h3>
+                      <h3 className="md:text-xl text-base font-semibold">
+                        Omar S
+                      </h3>
                       <p>India</p>
                     </div>
                   </div>
@@ -247,7 +259,7 @@ const Testimonial = () => {
                   </div>
                 </div>
 
-                <div className="mt-10">
+                <div className="mt-10 desc pb-3">
                   Best for App development company, we have something different
                   type of requirements but they where able to understand and it
                   was great to communicate from there team as per our time zone,
@@ -270,7 +282,9 @@ const Testimonial = () => {
                       className="rounded-full"
                     />
                     <div>
-                      <h3 className="text-xl font-semibold">Sonali Vaidya</h3>
+                      <h3 className="md:text-xl text-base font-semibold">
+                        Sonali Vaidya
+                      </h3>
                       <p>India</p>
                     </div>
                   </div>
@@ -283,7 +297,7 @@ const Testimonial = () => {
                   </div>
                 </div>
 
-                <div className="mt-10">
+                <div className="mt-10 desc pb-3">
                   Great team! They are super flexible, responsive, and detailed.
                   Nexgeno Technology helped us launch an entirely new website -
                   their module system is amazing. As someone who is not an
@@ -307,7 +321,9 @@ const Testimonial = () => {
                       className="rounded-full"
                     />
                     <div>
-                      <h3 className="text-xl font-semibold">Rajesh Oberoi</h3>
+                      <h3 className="md:text-xl text-base font-semibold">
+                        Rajesh Oberoi
+                      </h3>
                       <p>India</p>
                     </div>
                   </div>
@@ -320,7 +336,7 @@ const Testimonial = () => {
                   </div>
                 </div>
 
-                <div className="mt-10">
+                <div className="mt-10 desc pb-3">
                   Working with Nexgeno technology pvt ltd on my site was such a
                   pleasure. Arif and his team always so friendly, professional,
                   and happy to help me with any questions and concerns about my
@@ -343,7 +359,9 @@ const Testimonial = () => {
                       className="rounded-full"
                     />
                     <div>
-                      <h3 className="text-xl font-semibold">Omar S</h3>
+                      <h3 className="md:text-xl text-base font-semibold">
+                        Omar S
+                      </h3>
                       <p>India</p>
                     </div>
                   </div>
@@ -356,7 +374,7 @@ const Testimonial = () => {
                   </div>
                 </div>
 
-                <div className="mt-10">
+                <div className="mt-10 desc pb-3">
                   Best for App development company, we have something different
                   type of requirements but they where able to understand and it
                   was great to communicate from there team as per our time zone,

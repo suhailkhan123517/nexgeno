@@ -41,33 +41,6 @@ const Hero = () => {
                   allowFullScreen
                 ></iframe>
               </div>
-
-              {/* <form className="shadow-xl flex flex-col xl:px-14 md:px-10 px-5 xl:py-20 md:py-14 py-8 gap-7 rounded-lg  bg-white lg:mt-0 mt-10">
-                <p className="md:text-3xl text-2xl font-semibold leading-tight">
-                  Get a Free Enquire Now
-                </p>
-                <input
-                  type="text"
-                  className="border-b py-2 px-3 focus:border-b-blue-600    text-base outline-none"
-                  placeholder="Contact Person Name"
-                />
-                <input
-                  type="number"
-                  className="border-b py-2 px-3  focus:border-b-blue-600  text-base outline-none"
-                  placeholder="Mobile / Phone No"
-                />
-                <input
-                  type="text"
-                  className="border-b py-2 px-3  focus:border-b-blue-600  text-base outline-none"
-                  placeholder="Email Address"
-                />
-                <button
-                  type="submit"
-                  className="btn flex items-center justify-center"
-                >
-                  Submit
-                </button>
-              </form> */}
             </div>
           </div>
         </div>

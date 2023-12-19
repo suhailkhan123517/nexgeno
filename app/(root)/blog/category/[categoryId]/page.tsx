@@ -12,6 +12,7 @@ const CategoryIdPage = async ({
   const categoryPost = await db.post.findMany({
     where: {
       categoryId: params.categoryId,
+      isPublished: true,
     },
     include: {
       author: true,

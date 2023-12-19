@@ -11,13 +11,13 @@ const Expert = () => {
             Our Expertise in E-Commerce <br /> Website Development
           </h2>
 
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  place-items-start xl:gap-10 gap-3 md:mt-14 mt-7">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  xl:gap-10 gap-3 md:mt-14 mt-7">
             {ecommerceExpert.map((item) => (
               <div
                 key={item.id}
                 className="border-[1px] hover:border-pink-600 hover:shadow-xl transition duration-200 rounded-2xl"
               >
-                <div className=" bg-[#fffbfd] border-b w-full py-5 px-3 rounded-2xl flex xl:flex-row flex-col gap-2 items-center">
+                <div className=" bg-[#fffbfd] w-full py-5 px-3 rounded-2xl flex xl:flex-row flex-col gap-2 items-center">
                   <div className="w-24">
                     <div className="w-16 h-16 relative">
                       <Image
