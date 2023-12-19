@@ -2,7 +2,7 @@
 import { ThemeToggle } from "@/components/theme-toggle";
 import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { MdLogout, MdOutlineChat, MdPublic, MdSearch } from "react-icons/md";
+import { MdLogout, MdPublic, MdSearch } from "react-icons/md";
 
 const TopBar = () => {
   const router = useRouter();
@@ -26,7 +26,7 @@ const TopBar = () => {
               size={20}
             />
 
-            <button onClick={() => signOut()}>
+            <button onClick={() => signOut({ callbackUrl: "/" })}>
               <MdLogout size={20} />
             </button>
             <div>

@@ -9,7 +9,6 @@ const BlogClient = async () => {
     where: {
       isPublished: true,
     },
-
     orderBy: {
       createdAt: "desc",
     },

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Nexgeno | Authentication",
+  title: "Authentication",
   description:
     "Offshore Software Development & IT Consulting Company in mumbai india",
 };
