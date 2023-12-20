@@ -15,6 +15,8 @@ const BlogClient = async () => {
     },
   });
 
+  console.log(posts);
+
   const formatePosts = posts.map((item) => ({
     id: item.id,
     title: item.title,
