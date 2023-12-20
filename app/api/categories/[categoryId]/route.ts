@@ -1,11 +1,17 @@
 import { NextResponse } from "next/server";
 import db from "@/lib/db";
+import getCurrentUser from "@/actions/getCurrentUser";
 
 export async function PATCH(
   req: Request,
   { params }: { params: { categoryId: string } }
 ) {
   try {
+    const user = getCurrentUser();
+
+    if (!user) {
+      return new NextResponse("Unauthorized", { status: 401 });
+    }
     const { categoryId } = params;
     const values = await req.json();
 
@@ -29,19 +35,25 @@ export async function DELETE(
   req: Request,
   { params }: { params: { categoryId: string } }
 ) {
-  const postsCount = await db.post.count({
-    where: {
-      categoryId: params.categoryId,
-    },
-  });
-
-  if (postsCount > 0) {
-    return new NextResponse("Cannot delete category with associated posts", {
-      status: 400,
-    });
-  }
-
   try {
+    const user = getCurrentUser();
+
+    if (!user) {
+      return new NextResponse("Unauthorized", { status: 401 });
+    }
+
+    const postsCount = await db.post.count({
+      where: {
+        categoryId: params.categoryId,
+      },
+    });
+
+    if (postsCount > 0) {
+      return new NextResponse("Cannot delete category with associated posts", {
+        status: 400,
+      });
+    }
+
     const category = await db.category.delete({
       where: {
         id: params.categoryId,

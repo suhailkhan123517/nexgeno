@@ -5,6 +5,10 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
   try {
     const user = await getCurrentUser();
+
+    if (!user) {
+      return new NextResponse("Unauthorized", { status: 401 });
+    }
     const {
       title,
       description,

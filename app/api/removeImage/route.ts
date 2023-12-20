@@ -1,3 +1,4 @@
+import getCurrentUser from "@/actions/getCurrentUser";
 import cloudinary from "cloudinary";
 import { NextResponse } from "next/server";
 
@@ -9,6 +10,12 @@ cloudinary.v2.config({
 
 const removeImage = async (publicId: string) => {
   try {
+    const user = getCurrentUser();
+
+    if (!user) {
+      return new NextResponse("Unauthorized", { status: 401 });
+    }
+
     const res = await cloudinary.v2.uploader.destroy(publicId);
     console.log("image removed");
   } catch (error) {
