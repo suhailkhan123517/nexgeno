@@ -7,7 +7,7 @@ const PostsPage = async () => {
   const currentUser = await getCurrentUser();
 
   if (currentUser?.role !== "admin") {
-    redirect("/dashboard");
+    redirect("/admin/dashboard");
   }
 
   const users = await db.user.findMany({

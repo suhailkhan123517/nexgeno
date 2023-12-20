@@ -32,7 +32,7 @@ const Hero = () => {
             <div className="col-span-2 xl:px-10 md:mt-0 mt-10">
               <div className="border-[1px] rounded-lg border-pink-600 flex flex-col bg-white md:pt-10 pt-4 md:pb-7 pb-2">
                 <p className="text-xl text-center  font-semibold leading-tight">
-                  Get a Free Enquire Now
+                  Enquire Now
                 </p>
                 <iframe
                   className="h-[430px]"

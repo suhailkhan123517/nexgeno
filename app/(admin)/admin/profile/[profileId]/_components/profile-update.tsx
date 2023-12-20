@@ -110,7 +110,7 @@ const ProfileUpdate: React.FC<ProfileUpdateProps> = ({ user }) => {
               name="title"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Image</FormLabel>
+                  <FormLabel>Title</FormLabel>
                   <FormControl>
                     <Input
                       disabled={isSubmitting}
