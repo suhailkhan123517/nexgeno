@@ -18,7 +18,6 @@ export async function generateMetadata({
   const post = await db.post.findUnique({
     where: {
       id: params.blogId,
-      isPublished: true,
     },
   });
 
@@ -85,7 +84,7 @@ const BlogIdPage = async ({ params }: { params: { blogId: string } }) => {
             </div>
           </div>
           <div className="my-20">
-            <Preview value={post?.description!} />
+            <Preview value={post?.textEditor!} />
           </div>
         </div>
       </section>
