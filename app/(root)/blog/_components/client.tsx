@@ -6,6 +6,9 @@ import db from "@/lib/db";
 
 const BlogClient = async () => {
   const posts = await db.post.findMany({
+    where: {
+      isPublished: true,
+    },
     orderBy: {
       createdAt: "desc",
     },

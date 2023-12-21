@@ -20,7 +20,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
-import { AlertModal } from "@/components/modals/alert-modal";
 import { Category } from "@prisma/client";
 import { Heading } from "@/components/ui/heading";
 

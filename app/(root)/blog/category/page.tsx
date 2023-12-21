@@ -6,6 +6,9 @@ import { format } from "date-fns";
 
 const CategoryPage = async () => {
   const posts = await db.post.findMany({
+    where: {
+      isPublished: true,
+    },
     orderBy: {
       createdAt: "desc",
     },
