@@ -1,8 +1,7 @@
-import Image from "next/image";
 import db from "@/lib/db";
-import { format } from "date-fns";
-import { Preview } from "@/components/preview";
 import { Metadata } from "next";
+import { redirect } from "next/navigation";
+import BlogClientPage from "./_components/client";
 
 export async function generateStaticParams() {
   const post = await db.post.findMany();
@@ -13,11 +12,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { blogId: string };
+  params: { slug: string };
 }): Promise<Metadata> {
   const post = await db.post.findUnique({
     where: {
-      id: params.blogId,
+      slug: params.slug as string,
     },
   });
 
@@ -27,10 +26,11 @@ export async function generateMetadata({
   };
 }
 
-const BlogIdPage = async ({ params }: { params: { blogId: string } }) => {
+const BlogIdPage = async ({ params }: { params: { slug: string } }) => {
   const post = await db.post.findUnique({
     where: {
-      id: params.blogId,
+      slug: params.slug,
+      isPublished: true,
     },
     include: {
       author: true,
@@ -38,9 +38,35 @@ const BlogIdPage = async ({ params }: { params: { blogId: string } }) => {
     },
   });
 
+  const views = await db.postVisitor.findMany({
+    where: {
+      postId: post?.id,
+    },
+  });
+
+  const postPublished = post?.isPublished;
+
+  if (!postPublished) {
+    redirect("/blog");
+  }
+
   return (
     <>
-      <section>
+      <BlogClientPage
+        id={post.id}
+        catName={post.category?.catName}
+        title={post.title}
+        description={post.description}
+        authorImage={post.author?.imageUrl}
+        authorName={post.author?.name}
+        authorTitle={post.author?.title}
+        createdAt={post.createdAt}
+        imageUrl={post.imageUrl}
+        textEditor={post.textEditor}
+        views={views}
+      />
+
+      {/* <section>
         <div className="container mx-auto mt-10">
           <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
             <div className="mt-5 flex flex-col gap-6">
@@ -87,7 +113,7 @@ const BlogIdPage = async ({ params }: { params: { blogId: string } }) => {
             <Preview value={post?.textEditor!} />
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

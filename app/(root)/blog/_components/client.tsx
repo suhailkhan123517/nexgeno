@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiFillStar } from "react-icons/ai";
 import db from "@/lib/db";
+import { Eye } from "lucide-react";
 
 const BlogClient = async () => {
   const posts = await db.post.findMany({
@@ -15,13 +16,13 @@ const BlogClient = async () => {
     include: {
       author: true,
       category: true,
+      postVisitor: true,
     },
   });
 
-  console.log(posts);
-
   const formatePosts = posts.map((item) => ({
     id: item.id,
+    slug: item.slug,
     title: item.title,
     description: item.description,
     imageUrl: item.imageUrl,
@@ -29,6 +30,7 @@ const BlogClient = async () => {
     categoryId: item.categoryId,
     catName: item.category?.catName,
     createdAt: format(item.createdAt, "MMMM do, yyyy"),
+    views: item.postVisitor.length,
   }));
 
   const firstPost = formatePosts[0];
@@ -47,7 +49,7 @@ const BlogClient = async () => {
                 <div>
                   {firstPost ? (
                     <>
-                      <Link href={`/blog/${firstPost.id}`}>
+                      <Link href={`/blog/${firstPost.slug}`}>
                         <div className="relative w-full md:h-[350px] h-[200px] rounded-lg">
                           <Image
                             src={`${firstPost.imageUrl}`}
@@ -83,6 +85,10 @@ const BlogClient = async () => {
                           <span>.</span>
                           <span>17 min read</span>
                           <AiFillStar />
+                          <span className="flex items-center gap-2">
+                            <Eye />
+                            {firstPost.views} views
+                          </span>
                         </div>
                       </div>
                     </>
@@ -99,7 +105,7 @@ const BlogClient = async () => {
                         key={item.id}
                         className="grid grid-cols-3 gap-5 mb-3"
                       >
-                        <Link className="" href={`/blog/${item.id}`}>
+                        <Link className="" href={`/blog/${item.slug}`}>
                           <div className="relative xl:h-[130px] lg:h-[100px] xl:w-[200px] lg:w-[160px] h-[130px] w-full">
                             <Image
                               src={`${item.imageUrl}`}
@@ -136,6 +142,10 @@ const BlogClient = async () => {
                             <span>.</span>
                             <span>17 min read</span>
                             <AiFillStar />
+                            <span className="flex items-center gap-2">
+                              <Eye />
+                              {item.views} views
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -157,7 +167,7 @@ const BlogClient = async () => {
                         <div className="flex-auto">
                           <Link
                             key={item.id}
-                            href={`/blog/${item.id}`}
+                            href={`/blog/${item.slug}`}
                             className="mt-6"
                           >
                             <h2 className="md:text-2xl text-lg font-semibold text-black mb-3">
@@ -184,6 +194,10 @@ const BlogClient = async () => {
                             <span>.</span>
                             <span>17 min read</span>
                             <AiFillStar />
+                            <span className="flex items-center gap-2">
+                              <Eye />
+                              {item.views} views
+                            </span>
                           </div>
                         </div>
                         <div className="flex-auto">

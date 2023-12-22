@@ -17,34 +17,45 @@ model User {
   publicId        String?
   email           String?   @unique
   hashedPassword  String?
-  emailVerified   DateTime?
   posts           Post[]
 }
 
 
-model Post {
+model PostVisitor {
   id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  ip          String?
+  postId      String    @db.ObjectId
+  post        Post      @relation(fields: [postId], references: [id])
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+
+
+model Post {
+  id          String       @id @default(auto()) @map("_id") @db.ObjectId
   title       String?
+  slug        String?      @unique
   description String?
   textEditor  String?
   imageUrl    String?
   publicId    String?
   metaTitle   String?
   metaDesc    String?
-  isPublished Boolean @default(false)
-  categoryId  String? @db.ObjectId
-  category    Category? @relation(fields: [categoryId], references: [id])
-  authorId    String?   @db.ObjectId
-  author      User?    @relation(fields: [authorId], references: [id])
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  isPublished Boolean       @default(false)
+  categoryId  String?       @db.ObjectId
+  category    Category?     @relation(fields: [categoryId], references: [id])
+  authorId    String?       @db.ObjectId
+  author      User?         @relation(fields: [authorId], references: [id])
+  postVisitor PostVisitor[]
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
 }
 
 model Category {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   catName     String   @unique
   posts       Post[]
-  postIDs     String[] @db.ObjectId
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 }

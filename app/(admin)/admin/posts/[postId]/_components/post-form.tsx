@@ -36,6 +36,9 @@ const formSchema = z.object({
   }),
   categoryId: z.string().min(3),
   imageUrl: z.string().min(1),
+  slug: z.string().min(3, {
+    message: "Slug is required",
+  }),
   metaTitle: z.string().min(3, {
     message: "Meta Title  is required",
   }),
@@ -61,6 +64,7 @@ const PostForm = ({ options, initialData }: PostFormProps) => {
       textEditor: initialData?.textEditor || "",
       categoryId: initialData?.categoryId || "",
       imageUrl: initialData?.imageUrl || "",
+      slug: initialData?.slug || "",
       metaTitle: initialData?.metaTitle || "",
       metaDesc: initialData?.metaDesc || "",
     },
@@ -162,6 +166,23 @@ const PostForm = ({ options, initialData }: PostFormProps) => {
                         disabled={isSubmitting}
                         onChange={(url) => field.onChange(url)}
                         onRemove={() => field.onChange("")}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="slug"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Post Slug</FormLabel>
+                    <FormControl>
+                      <Input
+                        disabled={isSubmitting}
+                        placeholder="Slug"
+                        {...field}
                       />
                     </FormControl>
                     <FormMessage />

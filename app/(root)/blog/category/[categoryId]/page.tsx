@@ -3,6 +3,7 @@ import Link from "next/link";
 import { AiFillStar } from "react-icons/ai";
 import db from "@/lib/db";
 import { format } from "date-fns";
+import { Eye } from "lucide-react";
 
 const CategoryIdPage = async ({
   params,
@@ -17,6 +18,7 @@ const CategoryIdPage = async ({
     include: {
       author: true,
       category: true,
+      postVisitor: true,
     },
     orderBy: {
       createdAt: "desc",
@@ -32,6 +34,7 @@ const CategoryIdPage = async ({
     categoryId: item.categoryId,
     catName: item.category?.catName,
     createdAt: format(item.createdAt, "MMMM do, yyyy"),
+    views: item.postVisitor.length,
   }));
 
   const category = formatePosts[0].catName;
@@ -79,6 +82,10 @@ const CategoryIdPage = async ({
                               <span>.</span>
                               <span>17 min read</span>
                               <AiFillStar />
+                              <span className="flex items-center gap-2">
+                                <Eye />
+                                {item.views} views
+                              </span>
                             </div>
                           </div>
                           <div className="">

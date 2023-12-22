@@ -14,6 +14,7 @@ export async function POST(req: Request) {
       description,
       textEditor,
       imageUrl,
+      slug,
       metaTitle,
       metaDesc,
       categoryId,
@@ -22,6 +23,7 @@ export async function POST(req: Request) {
     const post = await db.post.create({
       data: {
         title,
+        slug,
         description,
         textEditor,
         imageUrl,
