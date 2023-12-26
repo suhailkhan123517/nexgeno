@@ -40,3 +40,27 @@ export async function POST(req: Request) {
     return new NextResponse("Internal Error", { status: 500 });
   }
 }
+
+export async function GET() {
+  try {
+    const posts = await db.post.findMany({
+      where: {
+        isPublished: true,
+      },
+
+      orderBy: {
+        createdAt: "desc",
+      },
+      include: {
+        author: true,
+        category: true,
+        postVisitor: true,
+      },
+    });
+
+    return NextResponse.json(posts);
+  } catch (error) {
+    console.log("[POST]", error);
+    return new NextResponse("Internal Error", { status: 500 });
+  }
+}

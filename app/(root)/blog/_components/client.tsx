@@ -222,7 +222,7 @@ const BlogClient = async () => {
         </>
       ) : (
         <>
-          <div className="flex justify-center items-center h-full w-fll">
+          <div className="flex justify-center items-center h-screen w-full">
             <h2 className="text-3xl">No Post Here</h2>
           </div>
         </>
