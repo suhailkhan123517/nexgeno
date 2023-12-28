@@ -5,6 +5,8 @@ import { AiFillStar } from "react-icons/ai";
 import db from "@/lib/db";
 import { Eye } from "lucide-react";
 
+export const revalidate = 0;
+
 const BlogClient = async () => {
   const posts = await db.post.findMany({
     where: {
