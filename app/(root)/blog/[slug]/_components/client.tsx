@@ -53,6 +53,9 @@ const BlogClientPage = ({
             Cookies.set("postIds", JSON.stringify(updatedPostIds));
             console.log("Updated postIds:", updatedPostIds);
             await axios.post(`/api/seen`, postData);
+            toast.success("Posted");
+          } else {
+            toast.error("Not Posted");
           }
         }
       } catch (error) {
