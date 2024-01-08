@@ -1,6 +1,6 @@
-import db from "@/lib/db";
 import AdminClient from "./_components/client";
 import getCurrentUser from "@/actions/getCurrentUser";
+import { db } from "@/lib/db";
 import { redirect } from "next/navigation";
 
 const PostsPage = async () => {

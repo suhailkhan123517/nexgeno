@@ -1,7 +1,7 @@
-import db from "@/lib/db";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
 import BlogClientPage from "./_components/client";
+import { db } from "@/lib/db";
 
 export async function generateStaticParams() {
   const post = await db.post.findMany();

@@ -1,6 +1,6 @@
 import getCurrentUser from "@/actions/getCurrentUser";
 import DashboardPage from "./_components/dashboard";
-import db from "@/lib/db";
+import { db } from "@/lib/db";
 
 const Dashboard = async () => {
   const posts = await db.post.findMany({

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillStar } from "react-icons/ai";
-import db from "@/lib/db";
 import { format } from "date-fns";
 import { Eye } from "lucide-react";
+import { db } from "@/lib/db";
 
 const CategoryIdPage = async ({
   params,

@@ -7,7 +7,7 @@ import { Loader2 } from "lucide-react";
 import toast from "react-hot-toast";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import {
   Form,
   FormControl,

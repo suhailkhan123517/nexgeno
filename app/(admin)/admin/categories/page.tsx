@@ -1,4 +1,4 @@
-import db from "@/lib/db";
+import { db } from "@/lib/db";
 import CategoryClient from "./_components/client";
 
 const CategoryPage = async () => {

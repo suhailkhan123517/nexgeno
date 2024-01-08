@@ -1,7 +1,7 @@
 import getCurrentUser from "@/actions/getCurrentUser";
 import AllPostClient from "./_components/client";
-import db from "@/lib/db";
 import { redirect } from "next/navigation";
+import { db } from "@/lib/db";
 
 const AllPostPage = async () => {
   const currentUser = await getCurrentUser();

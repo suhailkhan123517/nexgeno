@@ -1,5 +1,5 @@
+import { db } from "@/lib/db";
 import EmployUpdate from "./_components/employ-update";
-import db from "@/lib/db";
 
 const AdminPage = async ({ params }: { params: { adminId: string } }) => {
   const user = await db.user.findUnique({

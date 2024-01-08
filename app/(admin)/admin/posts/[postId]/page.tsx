@@ -1,5 +1,5 @@
+import { db } from "@/lib/db";
 import PostForm from "./_components/post-form";
-import db from "@/lib/db";
 
 const PostsPage = async ({ params }: { params: { postId: string } }) => {
   const post = await db.post.findUnique({

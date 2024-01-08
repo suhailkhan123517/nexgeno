@@ -1,4 +1,4 @@
-import db from "@/lib/db";
+import { db } from "@/lib/db";
 import PostClient from "./_components/client";
 import getCurrentUser from "@/actions/getCurrentUser";
 
