@@ -4,45 +4,59 @@ import Link from "next/link";
 import { AiFillStar } from "react-icons/ai";
 import { Eye } from "lucide-react";
 import { db } from "@/lib/db";
+import { getPosts } from "@/actions/getPosts";
 
 export const revalidate = 0;
 
-const BlogClient = async () => {
-  const posts = await db.post.findMany({
-    where: {
-      isPublished: true,
-    },
-    orderBy: {
-      createdAt: "desc",
-    },
-    include: {
-      author: true,
-      category: true,
-      postVisitor: true,
-    },
+interface BlogClientProps {
+  searchParams: {
+    title: string;
+    categoryId: string;
+  };
+}
+
+const BlogClient = async ({ searchParams }: BlogClientProps) => {
+  const posts = await getPosts({
+    ...searchParams,
   });
 
-  const formatePosts = posts.map((item) => ({
-    id: item.id,
-    slug: item.slug,
-    title: item.title,
-    description: item.description,
-    imageUrl: item.imageUrl,
-    name: item.author?.name,
-    categoryId: item.categoryId,
-    catName: item.category?.catName,
-    createdAt: format(item.createdAt, "MMMM do, yyyy"),
-    views: item.postVisitor.length,
-  }));
+  // console.log(posts);
 
-  const firstPost = formatePosts[0];
-  const firstFourPost = formatePosts.slice(0, 5);
-  const remainingPosts = firstFourPost.length > 1 ? firstFourPost.slice(1) : [];
-  const remainingObjects = formatePosts.slice(5);
+  // const posts = await db.post.findMany({
+  //   where: {
+  //     isPublished: true,
+  //   },
+  //   orderBy: {
+  //     createdAt: "desc",
+  //   },
+  //   include: {
+  //     author: true,
+  //     category: true,
+  //     postVisitor: true,
+  //   },
+  // });
+
+  // const formatePosts = posts.map((item) => ({
+  //   id: item.id,
+  //   slug: item.slug,
+  //   title: item.title,
+  //   description: item.description,
+  //   imageUrl: item.imageUrl,
+  //   name: item.author?.name,
+  //   categoryId: item.categoryId,
+  //   catName: item.category?.catName,
+  //   createdAt: format(item.createdAt, "MMMM do, yyyy"),
+  //   views: item.postVisitor.length,
+  // }));
+
+  // const firstPost = formatePosts[0];
+  // const firstFourPost = formatePosts.slice(0, 5);
+  // const remainingPosts = firstFourPost.length > 1 ? firstFourPost.slice(1) : [];
+  // const remainingObjects = formatePosts.slice(5);
 
   return (
     <>
-      {posts.length > 0 ? (
+      {/* {posts.length > 0 ? (
         <>
           {" "}
           <section>
@@ -228,7 +242,20 @@ const BlogClient = async () => {
             <h2 className="text-3xl">No Post Here</h2>
           </div>
         </>
-      )}
+      )} */}
+
+      {posts.map((item) => (
+        <div className="" key={item.id}>
+          <Link href={`/blog/${item.slug}`}>
+            <Image width={500} height={500} alt="title" src={item.imageUrl!} />
+          </Link>
+          <p>{item.title}</p>
+          <p>{item.description}</p>
+          <p>{item.slug}</p>
+          <p>{item.textEditor}</p>
+          <p>{item.metaTitle}</p>
+        </div>
+      ))}
     </>
   );
 };

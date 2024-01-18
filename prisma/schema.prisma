@@ -1,11 +1,12 @@
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
 }
 
 datasource db {
   provider = "mongodb"
-  relationMode = "prisma"
   url      = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
 
@@ -51,6 +52,9 @@ model Post {
   postVisitor PostVisitor[]
   createdAt   DateTime      @default(now())
   updatedAt   DateTime      @updatedAt
+
+
+  @@fulltext([title])
 }
 
 model Category {
